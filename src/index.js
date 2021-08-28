@@ -44,4 +44,6 @@ const JyankenBox = (props) => {
   )
 }
 
-
+JankenBox.propTypes = {
+  actionPon: PropTypes.func
+}
