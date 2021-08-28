@@ -68,3 +68,9 @@ ScoreBox.propTypes = {
   computer: PropTypes.number,
   judgement: PropTypes.number
 }
+
+ReactDOM.render(
+  <JyankeGamePage />,
+  document.getElementById('root')
+)
+
