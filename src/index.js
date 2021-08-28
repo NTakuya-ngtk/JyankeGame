@@ -47,3 +47,24 @@ const JyankenBox = (props) => {
 JankenBox.propTypes = {
   actionPon: PropTypes.func
 }
+
+const ScoreBox = {props} => {
+  const teString = ["グー","チョキ","パー"]
+  const judgmentString = ["引き分け","勝ち","負け"]
+
+  return (
+    <table>
+      <tbody>
+        <tr><th>あなた</th></tr> <td>{teString[props.human]}</td>
+        <tr><th>Computer</th></tr> <td>{teString[props.computer]}</td>
+        <tr><th>勝敗</th></tr> <td>{teString[props.judgment]}</td>
+      </tbody>
+    </table>
+  )
+}
+
+ScoreBox.propTypes = {
+  human: PropTypes.number,
+  computer: PropTypes.number,
+  judgement: PropTypes.number
+}
