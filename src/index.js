@@ -26,7 +26,7 @@ class JyankeGamePage extends Component {
     return(
       <div>
         <h1>じゃんけん　ぽん！</h1>
-        <JankenBox actionPon={(te) => this.pon(te)} />
+        <JyankenBox actionPon={(te) => this.pon(te)} />
         <ScoreBox human = {this.state.human} computer={this.state.computer} judgement={this.judge()} />
       </div>
     )
@@ -44,20 +44,20 @@ const JyankenBox = (props) => {
   )
 }
 
-JankenBox.propTypes = {
+JyankenBox.propTypes = {
   actionPon: PropTypes.func
 }
 
-const ScoreBox = {props} => {
+const ScoreBox = (props) => {
   const teString = ["グー","チョキ","パー"]
-  const judgmentString = ["引き分け","勝ち","負け"]
+  const judgementString = ["引き分け","勝ち","負け"]
 
   return (
     <table>
       <tbody>
-        <tr><th>あなた</th></tr> <td>{teString[props.human]}</td>
-        <tr><th>Computer</th></tr> <td>{teString[props.computer]}</td>
-        <tr><th>勝敗</th></tr> <td>{teString[props.judgment]}</td>
+        <tr><th>あなた</th><td>{teString[props.human]}</td></tr>
+        <tr><th>Computer</th><td>{teString[props.computer]}</td></tr>
+        <tr><th>勝敗</th><td>{judgementString[props.judgement]}</td></tr>
       </tbody>
     </table>
   )
