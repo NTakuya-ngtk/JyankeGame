@@ -22,6 +22,10 @@ class JyankeGamePage extends Component {
     }
   }
 
+  componentDidMount() {
+    setTimeout(()=> {this.pon(1)}, 1000)
+  }
+
   render(){
     return(
       <div>
